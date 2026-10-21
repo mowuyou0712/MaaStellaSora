@@ -23,6 +23,7 @@ on:
       - "README.md"
       - "LICENSE"
       - "tools/ci/**"
+      - "tools/updater/**"
   workflow_dispatch:
 
 permissions:
