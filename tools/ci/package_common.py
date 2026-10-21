@@ -13,6 +13,8 @@ PROJECT_FILES = {
     "LICENSE": "LICENSE",
     "assets/CONTACT": "CONTACT",
     "assets/requirements.txt": "requirements.txt",
+    "tools/updater/mss_update.py": "mss_update.py",
+    "tools/updater/update_mapping.json": "update_mapping.json",
 }
 REQUIRED_OCR_FILES = ("det.onnx", "rec.onnx", "keys.txt")
 
@@ -36,7 +38,7 @@ def copy_tree(source: Path, destination: Path) -> None:
 
 
 def copy_project_files(working_dir: Path, install_dir: Path) -> None:
-    """复制说明、许可证和运行依赖清单。"""
+    """复制说明、许可证、运行依赖清单和更新工具。"""
     for source, destination in PROJECT_FILES.items():
         path = working_dir / source
         require_file(path)
